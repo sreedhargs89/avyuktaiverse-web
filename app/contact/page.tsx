@@ -35,7 +35,7 @@ export default function ContactPage() {
               Let&apos;s have a{" "}<span className="gradient-text italic">real conversation.</span>
             </h1>
             <p className="text-lg text-white/50 leading-relaxed">
-              If you have a problem worth solving, we would like to hear about it. No sales scripts. No pressure. Just a conversation about whether we can genuinely help.
+              Please share your contact details and a brief outline of your business requirement or engineering challenge. We review every submission thoroughly to plan and ensure our very first conversation is highly productive. No sales scripts. No pressure.
             </p>
           </div>
         </Container>

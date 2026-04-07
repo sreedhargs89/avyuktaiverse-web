@@ -94,7 +94,7 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="message" className={labelClass}>
-          What are you working on? <span className="text-accent normal-case tracking-normal">*</span>
+          Requirement / Problem Statement <span className="text-accent normal-case tracking-normal">*</span>
         </label>
         <textarea
           id="message"
@@ -102,7 +102,7 @@ export function ContactForm() {
           required
           rows={5}
           className={`${inputClass} resize-none`}
-          placeholder="Describe the challenge or situation you would like to discuss."
+          placeholder="Please share your specific requirement or the problem you are trying to solve."
         />
       </div>
 

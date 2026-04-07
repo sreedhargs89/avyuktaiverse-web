@@ -60,6 +60,9 @@ export function Footer() {
 
         <div className="pt-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
           <p className="text-xs text-white/20">&copy; {year} {COMPANY.legalName}. All rights reserved.</p>
+          <div className="flex gap-4">
+            <Link href="/privacy" className="text-xs text-white/20 hover:text-white transition-colors">Privacy Policy</Link>
+          </div>
         </div>
       </div>
     </footer>
