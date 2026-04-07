@@ -4,19 +4,26 @@ import { Container } from "@/components/layout/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Badge } from "@/components/ui/badge";
 import { CtaBanner } from "@/components/home/cta-banner";
+import { CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Capabilities",
-  description: "AI-enabled talent extension, coaching, and adoption for engineering teams. Grounded, practical, and outcome-focused.",
+  description: "Advanced engineering, AI/Cloud integration, and strategic advisory. Building adaptable, high-ROI systems.",
 };
 
 const heroGrad = "linear-gradient(160deg, #0c0a1d 0%, #151030 40%, #1a103a 100%)";
 const darkGrad = "linear-gradient(160deg, #0a0818 0%, #110e28 100%)";
 
-const roles = [
-  { label: "Engineers & Developers", desc: "Experienced full-stack and backend engineers who ship working software and take ownership of what they build.", color: "#818cf8" },
-  { label: "Solution Architects", desc: "Architects who design for real constraints — not theoretical ideals — and communicate clearly with both engineering and business teams.", color: "#c084fc" },
-  { label: "Delivery Leaders", desc: "Delivery professionals who keep projects honest, teams aligned, and stakeholders informed — without bureaucracy.", color: "#34d399" },
+const engineeringCapabilities = [
+  { label: "Refactor & Re-architect", desc: "Modernize legacy systems using cloud-native services. We transform rigid monolithic architectures into scalable, AI-ready microservices.", color: "#818cf8" },
+  { label: "Product Development", desc: "From concept to execution. We engineer reliable new products and services heavily integrated with modern data streams and AI workflows.", color: "#c084fc" },
+  { label: "Flawless Integration", desc: "A sound strategy depends on execution. We orchestrate the integration of complex applications, APIs, and storage between on-premises and cloud environments.", color: "#34d399" },
+];
+
+const teamStrengths = [
+  { label: "Advanced Engineers", desc: "Professionals who possess not just specialized knowledge, but the ability to grasp front-line industry needs and respond efficiently.", color: "#818cf8" },
+  { label: "Extensive Solutions", desc: "Providing multi-domain support across finance, technology, manufacturing, and logistics. Our adaptable expertise spans modern cloud infrastructure, robotics, and AI.", color: "#c084fc" },
+  { label: "Strategic Partnerships", desc: "We act as your true technology partner, delivering services rooted in strong corporate ethics, reliability, and human-to-human connection.", color: "#34d399" },
 ];
 
 export default function CapabilitiesPage() {
@@ -39,10 +46,10 @@ export default function CapabilitiesPage() {
             <div>
               <Badge variant="pulse" className="mb-6">Capabilities</Badge>
               <h1 className="font-serif font-bold text-white mb-5" style={{ fontSize: "clamp(2.4rem, 6vw, 4rem)" }}>
-                What we bring to{" "}<span className="gradient-text italic">your teams.</span>
+                Engineering for a{" "}<span className="gradient-text italic">shifting landscape.</span>
               </h1>
-              <p className="text-lg text-white/50 leading-relaxed">
-                Capabilities at Avyukt AIverse are defined by what we can actually do — and the outcomes we take responsibility for.
+              <p className="text-lg text-white/50 leading-relaxed max-w-lg">
+                We deliver advanced engineering, seamless cloud integration, and the strategic foresight needed to keep your business adaptable and highly competitive.
               </p>
             </div>
             <div className="hidden lg:flex justify-center">
@@ -56,59 +63,114 @@ export default function CapabilitiesPage() {
         </Container>
       </section>
 
-      <section className="relative py-20 lg:py-28" id="talent-extension" style={{ background: darkGrad }}>
+      {/* Engineering & Integration Section */}
+      <section className="relative py-20 lg:py-28" id="engineering" style={{ background: darkGrad }}>
         <div className="section-divider absolute top-0 left-0 right-0" />
         <Container>
-          <div className="max-w-3xl">
-            <Badge variant="default" className="mb-6">Primary Offering</Badge>
-            <SectionHeading title="AI-Enabled Talent & Capability Extension" subtitle="We work inside your teams, not alongside them as observers." dark />
-            <div className="space-y-5 text-white/55 leading-relaxed mb-12">
-              <p>We embed skilled engineers, architects, and delivery professionals directly into your teams. These are not contractors filling seats. They are problem solvers who learn your context, take ownership of outcomes, and apply AI thoughtfully to improve the quality and pace of what you build.</p>
-              <p>Each engagement begins with understanding — not with proposals. We spend time learning your architecture, your constraints, your team dynamics, and what success actually looks like for your organisation. Only then do we commit to how we can help.</p>
-              <p>AI enters the picture where it genuinely improves delivery: in code review, in design verification, in automated quality checks, in surfacing risks early. It does not replace engineering judgement. It extends the capacity of engineers who already have good judgement.</p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-              {roles.map((item, i) => (
-                <div key={item.label} className="glass-card p-6 reveal" style={{ transitionDelay: `${i * 0.1}s` }}>
-                  <div className="w-8 h-1 rounded-full mb-4" style={{ background: item.color }} />
-                  <h4 className="font-sans font-semibold text-white mb-2 text-sm">{item.label}</h4>
-                  <p className="text-[13px] text-white/45 leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      <section className="relative py-20 lg:py-28" id="coaching" style={{ background: heroGrad }}>
-        <div className="section-divider absolute top-0 left-0 right-0" />
-        <Container>
-          <div className="max-w-3xl">
-            <Badge variant="amber" className="mb-6">Supporting Offering</Badge>
-            <SectionHeading title="AI Coaching & Adoption" subtitle="Helping technical professionals work better with AI — in the context of real work." dark />
+          <div className="max-w-3xl mb-12">
+            <Badge variant="default" className="mb-6">Core Offering</Badge>
+            <SectionHeading title="Engineering & Integration" subtitle="Reliable capability. Thoughtful execution." dark />
             <div className="space-y-5 text-white/55 leading-relaxed">
-              <p>As an extension of our delivery work, we help software engineers, architects, and technical leaders build genuine AI fluency. Not through certification programmes or generic workshops. Through applied coaching, grounded in the work your teams are actually doing.</p>
-              <p>AI fluency is not about knowing the tools. It is about knowing when to use them, when not to, how to verify their outputs, and how to maintain engineering integrity while benefiting from what AI offers. That takes experience and honest guidance — not slides.</p>
-              <p>This offering exists because we encounter it naturally in our delivery engagements. When we see teams struggling with AI adoption, we help. When we see engineers unsure about where AI fits into their practice, we work alongside them to figure it out.</p>
+              <p>With deep cloud engineering experience and strong alliance partnerships, we steer clients through complex IT transformations. We offer robust engineering capabilities specifically designed to handle the scale and velocity of modern AI tools.</p>
+              <p>Because your AI application is only as good as the infrastructure beneath it, we emphasize flawless integration between legacy on-premises architecture, new cloud services, and next-generation data storage.</p>
             </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {engineeringCapabilities.map((item, i) => (
+              <div key={item.label} className="glass-card p-6 reveal" style={{ transitionDelay: `${i * 0.1}s` }}>
+                <div className="w-8 h-1 rounded-full mb-5" style={{ background: item.color }} />
+                <h4 className="font-sans font-semibold text-white mb-3 text-sm">{item.label}</h4>
+                <p className="text-[14px] text-white/50 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </Container>
       </section>
 
-      <section className="relative py-16 lg:py-20" style={{ background: darkGrad }}>
+      {/* Pillars / Philosophy Section */}
+      <section className="relative py-20 lg:py-28 overflow-hidden" id="philosophy" style={{ background: heroGrad }}>
         <div className="section-divider absolute top-0 left-0 right-0" />
-        <Container>
-          <div className="max-w-2xl gradient-border-card reveal">
-            <div className="gradient-border-card-inner p-8">
-              <Badge variant="muted" className="mb-5">Future Direction</Badge>
-              <h2 className="text-2xl font-serif font-bold text-white mb-4">Fully Managed Solutions</h2>
-              <p className="text-white/45 leading-relaxed">Over time, the patterns and insights we gain from real delivery engagements will inform purpose-built solutions for recurring problems we encounter in the field. This is a future direction — not a current offering. When it arrives, it will be grounded in actual experience, not speculation.</p>
+        <Container className="relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="reveal">
+              <Badge variant="amber" className="mb-6">Architecture Principles</Badge>
+              <h2 className="text-3xl lg:text-4xl font-serif font-medium text-white mb-6 leading-tight">
+                Built to Adapt, <br /><span className="gradient-text italic">Governed for Value.</span>
+              </h2>
+              <p className="text-white/50 leading-relaxed mb-8 text-lg">
+                Traditionally, systems were built to last. But business is undergoing continuous transformation—and IT must respond fluidly.
+              </p>
+
+              <div className="space-y-8">
+                <div className="flex gap-4">
+                  <div className="mt-1"><CheckCircle2 size={20} className="text-amber-400 opacity-80" /></div>
+                  <div>
+                    <h4 className="text-white font-sans font-semibold mb-2">Build for Adaptability</h4>
+                    <p className="text-white/45 text-sm leading-relaxed">We promote loose coupling in your cloud and AI choices. Avoiding vendor lock-in ensures your infrastructure remains agile enough to pivot during unexpected market changes or global shifts.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="mt-1"><CheckCircle2 size={20} className="text-emerald-400 opacity-80" /></div>
+                  <div>
+                    <h4 className="text-white font-sans font-semibold mb-2">Cost & Compliance Forensics</h4>
+                    <p className="text-white/45 text-sm leading-relaxed">Adopting cloud and AI services is primarily driven by ease-of-use and ROI. We thoroughly analyze long-term predictive costs (TCO) and mandate strict governance and security boundaries before writing a single line of code.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="mt-1"><CheckCircle2 size={20} className="text-indigo-400 opacity-80" /></div>
+                  <div>
+                    <h4 className="text-white font-sans font-semibold mb-2">AI Center of Excellence (AICoE)</h4>
+                    <p className="text-white/45 text-sm leading-relaxed">The evolution of technology demands a team of strategists from IT, business, and vendor sides. We help you establish an AICoE—a long-term operational framework ensuring you move continuously from driving costs to driving business value.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="reveal hidden lg:block" style={{ transitionDelay: "0.2s" }}>
+              <div className="gradient-border-card">
+                <div className="gradient-border-card-inner p-10 flex flex-col items-center text-center">
+                  <div className="w-20 h-20 rounded-full mb-6 flex items-center justify-center relative shadow-[0_0_40px_rgba(129,140,248,0.2)]" style={{ background: "rgba(129,140,248,0.1)", border: "1px solid rgba(129,140,248,0.2)" }}>
+                    <Image src="/ai-art.png" alt="Excellence" width={80} height={80} className="rounded-full opacity-80" />
+                  </div>
+                  <h3 className="text-xl font-serif font-bold text-white mb-4">The Best-Fitting IT Solution</h3>
+                  <p className="text-white/45 text-sm leading-relaxed">
+                    Our process involves deep consultation, pragmatic design, strict quality assurance, and flawless execution to yield a solution uniquely fitted to your business objective.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </Container>
       </section>
 
-      <CtaBanner title="Let's talk about your situation." subtitle="We start every conversation by listening. Tell us what you are dealing with, and we will tell you honestly whether we can help." />
+      {/* The Team / Professionalism Section */}
+      <section className="relative py-20 lg:py-28 border-t border-white/[0.05]" id="team" style={{ background: darkGrad }}>
+        <Container>
+          <div className="text-center max-w-3xl mx-auto mb-16 reveal">
+            <Badge variant="muted" className="mb-6">The Avyukt Difference</Badge>
+            <h2 className="text-3xl lg:text-4xl font-serif font-medium text-white mb-6">
+              Experienced. Professional. <span className="gradient-text italic">Partners.</span>
+            </h2>
+            <p className="text-white/50 text-lg leading-relaxed">
+              We face our customers&apos; management and technology issues head-on. We are more than just contractors; we are partners providing solutions based on human capability and precise technological application.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {teamStrengths.map((item, i) => (
+              <div key={item.label} className="glass-card p-8 reveal flex flex-col text-center items-center" style={{ transitionDelay: `${i * 0.15}s` }}>
+                 <div className="w-12 h-12 rounded-full flex items-center justify-center mb-6" style={{ background: `rgba(255,255,255,0.03)`, border: `1px solid ${item.color}40` }}>
+                    <div className="w-2 h-2 rounded-full shadow-[0_0_10px_currentColor]" style={{ backgroundColor: item.color, color: item.color }} />
+                 </div>
+                 <h4 className="font-sans font-semibold text-white mb-3">{item.label}</h4>
+                 <p className="text-sm text-white/50 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <CtaBanner title="Let's talk about your situation." subtitle="Contact our specialized team today to learn how our engineering capability and strategic alignment can drive your business forward." />
     </>
   );
 }
