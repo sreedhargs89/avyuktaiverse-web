@@ -37,6 +37,10 @@ export function Footer() {
                 <Mail size={14} style={{ color: "#818cf8" }} />
                 {COMPANY.email}
               </a>
+              <a href={`mailto:${COMPANY.supportEmail}`} className="flex items-center gap-2 text-sm text-white/40 hover:text-white transition-colors duration-200">
+                <Mail size={14} style={{ color: "#818cf8" }} />
+                {COMPANY.supportEmail}
+              </a>
               {COMPANY.linkedin ? (
                 <a href={COMPANY.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-white/40 hover:text-white transition-colors duration-200">
                   <ExternalLink size={14} style={{ color: "#818cf8" }} />

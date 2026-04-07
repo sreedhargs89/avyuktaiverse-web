@@ -3,7 +3,7 @@
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const TO_EMAIL = "sreedhargs89@gmail.com";
+const TO_EMAIL = "contact@avyuktaiverse.com";
 
 export interface ContactFormState {
   status: "idle" | "success" | "error";

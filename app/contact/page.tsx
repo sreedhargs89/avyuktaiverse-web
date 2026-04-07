@@ -56,7 +56,10 @@ export default function ContactPage() {
                   <Mail size={15} style={{ color: "#818cf8" }} />
                   <p className="text-xs font-sans font-semibold uppercase tracking-widest" style={{ color: "#818cf8" }}>Direct Email</p>
                 </div>
-                <a href={`mailto:${COMPANY.email}`} className="text-white/60 hover:text-white transition-colors text-sm break-all">{COMPANY.email}</a>
+                <div className="flex flex-col gap-2">
+                  <a href={`mailto:${COMPANY.email}`} className="text-white/60 hover:text-white transition-colors text-sm break-all">{COMPANY.email}</a>
+                  <a href={`mailto:${COMPANY.supportEmail}`} className="text-white/60 hover:text-white transition-colors text-sm break-all">{COMPANY.supportEmail} <span className="text-white/40">(Support)</span></a>
+                </div>
               </div>
 
               {COMPANY.linkedin && (

@@ -4,8 +4,9 @@ export const COMPANY = {
   tagline: "Engineers who think. AI that helps.",
   description:
     "AI-enabled engineers, architects, and delivery professionals who work alongside your teams to solve real problems.",
-  email: "sreedhargs89@gmail.com",
-  domain: "avyukt-aiverse.com",
+  email: "contact@avyuktaiverse.com",
+  supportEmail: "support@avyuktaiverse.com",
+  domain: "avyuktaiverse.com",
   linkedin: "", // add once created
 } as const;
 
