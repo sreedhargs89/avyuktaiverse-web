@@ -20,7 +20,8 @@ export function MobileMenu() {
       </button>
 
       {open && (
-        <div className="fixed inset-0 z-[100] flex flex-col bg-[#050410] supports-[backdrop-filter]:bg-[#050410]/95 supports-[backdrop-filter]:backdrop-blur-2xl">
+        <div className="fixed inset-0 z-[100] flex flex-col backdrop-blur-[24px]"
+             style={{ backgroundColor: "rgba(7, 5, 20, 0.96)" }}>
           <div className="flex items-center justify-between px-6 h-16 border-b border-white/[0.05]">
             <Logo />
             <button
