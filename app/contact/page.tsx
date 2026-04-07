@@ -75,7 +75,10 @@ export default function ContactPage() {
                   <MapPin size={15} style={{ color: "#818cf8" }} />
                   <p className="text-xs font-sans font-semibold uppercase tracking-widest" style={{ color: "#818cf8" }}>Location</p>
                 </div>
-                <p className="text-white/60 text-sm leading-relaxed">{COMPANY.address}</p>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  <strong className="block text-white/80 font-medium mb-1 font-sans">{COMPANY.legalName}</strong>
+                  {COMPANY.address}
+                </p>
               </div>
 
               {COMPANY.linkedin && (
