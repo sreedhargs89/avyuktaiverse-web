@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Logo } from "@/components/ui/logo";
 import { COMPANY, NAV_LINKS } from "@/lib/constants";
-import { ExternalLink, Mail, MapPin } from "lucide-react";
+import { ExternalLink, Mail, MapPin, Phone } from "lucide-react";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -47,9 +47,13 @@ export function Footer() {
                   LinkedIn
                 </a>
               ) : null}
-              <span className="flex items-center gap-2 text-sm text-white/30">
-                <MapPin size={14} style={{ color: "#818cf8", opacity: 0.5 }} />
-                India
+              <a href={`tel:${COMPANY.phone.replace(/[-+ \s]/g, '')}`} className="flex items-center gap-2 text-sm text-white/40 hover:text-white transition-colors duration-200">
+                <Phone size={14} style={{ color: "#818cf8" }} />
+                {COMPANY.phone}
+              </a>
+              <span className="flex items-start gap-2 text-sm text-white/30 leading-snug">
+                <MapPin size={14} style={{ color: "#818cf8", opacity: 0.5, marginTop: "2px", flexShrink: 0 }} />
+                {COMPANY.address}
               </span>
             </div>
           </div>
@@ -57,10 +61,6 @@ export function Footer() {
 
         <div className="pt-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
           <p className="text-xs text-white/20">&copy; {year} {COMPANY.legalName}. All rights reserved.</p>
-          <div className="flex gap-4">
-            <span className="text-xs text-white/15">Privacy</span>
-            <span className="text-xs text-white/15">Terms</span>
-          </div>
         </div>
       </div>
     </footer>

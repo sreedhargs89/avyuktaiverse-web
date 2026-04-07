@@ -3,7 +3,7 @@ import { Container } from "@/components/layout/container";
 import { ContactForm } from "@/components/ui/contact-form";
 import { Badge } from "@/components/ui/badge";
 import { COMPANY } from "@/lib/constants";
-import { Mail, ExternalLink, Clock, Shield } from "lucide-react";
+import { Mail, ExternalLink, Clock, Shield, Phone, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -60,6 +60,22 @@ export default function ContactPage() {
                   <a href={`mailto:${COMPANY.email}`} className="text-white/60 hover:text-white transition-colors text-sm break-all">{COMPANY.email}</a>
                   <a href={`mailto:${COMPANY.supportEmail}`} className="text-white/60 hover:text-white transition-colors text-sm break-all">{COMPANY.supportEmail} <span className="text-white/40">(Support)</span></a>
                 </div>
+              </div>
+
+              <div className="glass-card p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <Phone size={15} style={{ color: "#818cf8" }} />
+                  <p className="text-xs font-sans font-semibold uppercase tracking-widest" style={{ color: "#818cf8" }}>Phone</p>
+                </div>
+                <a href={`tel:${COMPANY.phone.replace(/[-+ \s]/g, '')}`} className="text-white/60 hover:text-white transition-colors text-sm">{COMPANY.phone}</a>
+              </div>
+
+              <div className="glass-card p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <MapPin size={15} style={{ color: "#818cf8" }} />
+                  <p className="text-xs font-sans font-semibold uppercase tracking-widest" style={{ color: "#818cf8" }}>Location</p>
+                </div>
+                <p className="text-white/60 text-sm leading-relaxed">{COMPANY.address}</p>
               </div>
 
               {COMPANY.linkedin && (

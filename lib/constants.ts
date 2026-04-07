@@ -7,6 +7,8 @@ export const COMPANY = {
   email: "contact@avyuktaiverse.com",
   supportEmail: "support@avyuktaiverse.com",
   domain: "avyuktaiverse.com",
+  phone: "+91 9880-321-906",
+  address: "34, 003, Mantri Residency, Bannerghatta Road, Kalena Agrahara, Bangalore South, Bengaluru, Karnataka – 560076",
   linkedin: "", // add once created
 } as const;
 
