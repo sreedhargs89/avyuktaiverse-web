@@ -59,7 +59,10 @@ export function Footer() {
         </div>
 
         <div className="pt-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-          <p className="text-xs text-white/20">&copy; {year} {COMPANY.legalName}. All rights reserved.</p>
+          <p className="text-xs text-white/20 flex flex-wrap items-center gap-2">
+             <span>&copy; {year} {COMPANY.legalName}. All rights reserved.</span>
+             <span className="px-1.5 py-0.5 rounded bg-white/[0.03] border border-white/[0.05] font-mono text-[9px] uppercase tracking-wider text-white/25">Build {APP_VERSION}</span>
+          </p>
           <div className="flex gap-4">
             <Link href="/privacy" className="text-xs text-white/20 hover:text-white transition-colors">Privacy Policy</Link>
           </div>

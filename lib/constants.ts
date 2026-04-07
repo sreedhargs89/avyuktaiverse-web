@@ -1,3 +1,5 @@
+export const APP_VERSION = "v1.0.0";
+
 export const COMPANY = {
   name: "Avyukt AIverse",
   legalName: "Avyukt AIverse Private Limited",
@@ -21,6 +23,6 @@ export const NAV_LINKS = [
 
 export const FOUNDER = {
   name: "Sreedhar GS",
-  role: "Founder & Solution Architect",
-  bio: "Sreedhar is a solution architect with deep experience in software engineering, system design, and AI-enabled delivery. He founded Avyukt AIverse to bridge the gap between practical engineering and thoughtful AI adoption.",
+  role: "Founder & Global Engineering Leader",
+  bio: "Sreedhar is a solution architect with deep experience in software engineering, system design, and AI-enabled delivery.",
 } as const;

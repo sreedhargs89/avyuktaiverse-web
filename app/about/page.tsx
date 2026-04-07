@@ -83,18 +83,50 @@ export default function AboutPage() {
       <section className="relative py-20 lg:py-28" style={{ background: darkGrad }}>
         <div className="section-divider absolute top-0 left-0 right-0" />
         <Container>
-          <SectionHeading eyebrow="The Team" title="Who we are." dark />
-          <div className="max-w-lg gradient-border-card reveal">
-            <div className="gradient-border-card-inner p-8">
-              <div className="flex items-start gap-5">
-                <div className="w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0"
-                  style={{ background: "rgba(129,140,248,0.1)", border: "1px solid rgba(129,140,248,0.2)" }}>
-                  <User size={22} style={{ color: "#818cf8" }} />
+          <SectionHeading eyebrow="Leadership" title="Who we are." dark />
+          <div className="gradient-border-card reveal hover:scale-[1.01] transition-transform duration-500">
+            <div className="gradient-border-card-inner p-8 lg:p-12">
+              <div className="flex flex-col lg:flex-row gap-10">
+                <div className="lg:w-1/3 flex-shrink-0">
+                  <div className="w-20 h-20 rounded-full flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(129,140,248,0.15)]"
+                    style={{ background: "rgba(129,140,248,0.1)", border: "1px solid rgba(129,140,248,0.2)" }}>
+                    <User size={32} style={{ color: "#818cf8" }} />
+                  </div>
+                  <h3 className="font-serif font-bold text-white text-2xl mb-1 mt-4">{FOUNDER.name}</h3>
+                  <p className="text-xs mb-6 gradient-text font-semibold uppercase tracking-widest">{FOUNDER.role}</p>
+                  <div className="flex flex-col gap-3 text-white/50 text-sm">
+                    <p className="flex items-center gap-2">
+                       <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 opacity-80"></span>
+                       15+ Years Global Experience
+                    </p>
+                    <p className="flex items-center gap-2">
+                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 opacity-80"></span>
+                       SAP Labs & Asahi Group
+                    </p>
+                    <p className="flex items-center gap-2">
+                       <span className="w-1.5 h-1.5 rounded-full bg-amber-400 opacity-80"></span>
+                       Open Source / AI Contributor
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <p className="font-sans font-semibold text-white text-base">{FOUNDER.name}</p>
-                  <p className="text-sm mb-3 gradient-text font-medium">{FOUNDER.role}</p>
-                  <p className="text-white/50 leading-relaxed text-[15px]">{FOUNDER.bio}</p>
+                <div className="lg:w-2/3 border-t lg:border-t-0 lg:border-l border-white/[0.05] pt-8 lg:pt-0 lg:pl-10">
+                  <h4 className="text-white font-sans font-semibold text-lg mb-4">Driving Enterprise Transformation</h4>
+                  <div className="space-y-4 text-white/60 leading-relaxed text-[15px]">
+                    <p>Sreedhar is a Global Engineering Leader with over 15 years of experience directing cross-cultural teams across Japan, Australia, Europe, and India. He specializes in delivering cloud-native platforms, AI-driven infrastructure, and enterprise SaaS products that generate measurable business and financial impact.</p>
+                    <p>His executive track record includes building and scaling engineering organizations from the ground up, reducing MTTR by 40% through AI-driven SRE transformations, and architecting cloud-native platforms (like a Chaos Engineering SaaS on SAP BTP) that generated over $1M+ in recurring annual revenue.</p>
+                    <p>Working as a trusted engineering leader at organizations like <strong>Asahi Group Holdings</strong> and <strong>SAP Labs</strong>, he translates complex observability, compliance, and platform requirements into architecture decisions. His technical foundation spans distributed systems, GenAI/RAG, and SAP BTP, combined with the strategic fluency to translate architecture directly into P&L outcomes.</p>
+                  </div>
+                  
+                  <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                     <div className="p-5 rounded-xl glass-card transition-colors duration-300 hover:bg-white/[0.04]">
+                       <p className="text-3xl font-bold text-white mb-2" style={{ fontFamily: "var(--font-playfair)" }}>¥1.3B</p>
+                       <p className="text-xs text-white/40 uppercase tracking-widest font-semibold">Vendor Cost Avoidance</p>
+                     </div>
+                     <div className="p-5 rounded-xl glass-card transition-colors duration-300 hover:bg-white/[0.04]">
+                       <p className="text-3xl font-bold text-white mb-2" style={{ fontFamily: "var(--font-playfair)" }}>$1M+</p>
+                       <p className="text-xs text-white/40 uppercase tracking-widest font-semibold">SaaS Product ARR</p>
+                     </div>
+                  </div>
                 </div>
               </div>
             </div>
