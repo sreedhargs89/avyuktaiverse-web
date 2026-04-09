@@ -121,14 +121,24 @@ export default function AboutPage() {
                     <p>Engaged as a trusted technical leader with global enterprises and Fortune-class technology organizations — translating complex observability, compliance, and platform requirements into architecture decisions. His foundation spans distributed systems, GenAI/RAG, and cloud-native platforms, combined with the strategic fluency to drive digital transformation roadmaps and translate architecture directly into P&L outcomes and board-level narratives.</p>
                   </div>
                   
-                  <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="mt-8 grid grid-cols-2 gap-4">
                      <div className="p-5 rounded-xl glass-card transition-colors duration-300 hover:bg-white/[0.04]">
-                       <p className="text-3xl font-bold text-white mb-2" style={{ fontFamily: "var(--font-playfair)" }}>¥1.3B</p>
+                       <p className="text-3xl font-bold text-white mb-1" style={{ fontFamily: "var(--font-playfair)" }}>¥1.3B</p>
                        <p className="text-xs text-white/40 uppercase tracking-widest font-semibold">Vendor Cost Avoidance</p>
                      </div>
                      <div className="p-5 rounded-xl glass-card transition-colors duration-300 hover:bg-white/[0.04]">
-                       <p className="text-3xl font-bold text-white mb-2" style={{ fontFamily: "var(--font-playfair)" }}>$1M+</p>
+                       <p className="text-3xl font-bold text-white mb-1" style={{ fontFamily: "var(--font-playfair)" }}>$1M+</p>
                        <p className="text-xs text-white/40 uppercase tracking-widest font-semibold">SaaS Product ARR</p>
+                     </div>
+                     <div className="p-5 rounded-xl glass-card transition-colors duration-300 hover:bg-white/[0.04]">
+                       <p className="text-3xl font-bold text-white mb-1" style={{ fontFamily: "var(--font-playfair)" }}>40%</p>
+                       <p className="text-xs text-white/40 uppercase tracking-widest font-semibold">MTTR Reduction</p>
+                       <p className="text-[11px] text-white/25 mt-1">AI-Driven SRE</p>
+                     </div>
+                     <div className="p-5 rounded-xl glass-card transition-colors duration-300 hover:bg-white/[0.04]">
+                       <p className="text-3xl font-bold text-white mb-1" style={{ fontFamily: "var(--font-playfair)" }}>50%</p>
+                       <p className="text-xs text-white/40 uppercase tracking-widest font-semibold">Operational Cost Savings</p>
+                       <p className="text-[11px] text-white/25 mt-1">AI-Driven SRE</p>
                      </div>
                   </div>
                 </div>
