@@ -7,8 +7,8 @@ import { TypingText } from "@/components/ui/typing-text";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Insights | Avyukt AIverse",
-  description: "Perspectives on AI, engineering, and delivery from Avyukt AIverse. Coming soon.",
+  title: "Insights | Avyukt AIverse®",
+  description: "Perspectives on AI, engineering, and delivery from Avyukt AIverse®. Coming soon.",
 };
 
 export default function InsightsPage() {

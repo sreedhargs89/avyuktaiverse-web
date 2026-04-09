@@ -7,7 +7,7 @@ import { Mail, ExternalLink, Clock, Shield, Phone, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch with Avyukt AIverse. No sales scripts — just a straightforward conversation about your engineering challenges.",
+  description: "Get in touch with Avyukt AIverse®. No sales scripts — just a straightforward conversation about your engineering challenges.",
 };
 
 const heroGrad = "linear-gradient(160deg, #0c0a1d 0%, #151030 40%, #1a103a 100%)";
@@ -87,7 +87,7 @@ export default function ContactPage() {
                     <ExternalLink size={15} style={{ color: "#818cf8" }} />
                     <p className="text-xs font-sans font-semibold uppercase tracking-widest" style={{ color: "#818cf8" }}>LinkedIn</p>
                   </div>
-                  <a href={COMPANY.linkedin} target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors text-sm">Avyukt AIverse</a>
+                  <a href={COMPANY.linkedin} target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors text-sm">Avyukt AIverse®</a>
                 </div>
               )}
 

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Logo({ className }: { className?: string }) {
   return (
-    <Link href="/" className={className} aria-label="Avyukt AIverse — Home">
+    <Link href="/" className={className} aria-label="Avyukt AIverse® — Home">
       <span className="font-serif text-xl font-medium text-white tracking-tight">
         Avyukt
       </span>
