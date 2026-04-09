@@ -101,7 +101,11 @@ export default function AboutPage() {
                     </p>
                     <p className="flex items-center gap-2">
                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 opacity-80"></span>
-                       SAP Labs & Asahi Group
+                       AI & Digital Transformation
+                    </p>
+                    <p className="flex items-center gap-2">
+                       <span className="w-1.5 h-1.5 rounded-full bg-purple-400 opacity-80"></span>
+                       Global Talent & Org Building
                     </p>
                     <p className="flex items-center gap-2">
                        <span className="w-1.5 h-1.5 rounded-full bg-amber-400 opacity-80"></span>
@@ -112,9 +116,9 @@ export default function AboutPage() {
                 <div className="lg:w-2/3 border-t lg:border-t-0 lg:border-l border-white/[0.05] pt-8 lg:pt-0 lg:pl-10">
                   <h4 className="text-white font-sans font-semibold text-lg mb-4">Driving Enterprise Transformation</h4>
                   <div className="space-y-4 text-white/60 leading-relaxed text-[15px]">
-                    <p>Sreedhar is a Global Engineering Leader with over 15 years of experience directing cross-cultural teams across Japan, Australia, Europe, and India. He specializes in delivering cloud-native platforms, AI-driven infrastructure, and enterprise SaaS products that generate measurable business and financial impact.</p>
-                    <p>His executive track record includes building and scaling engineering organizations from the ground up, reducing MTTR by 40% through AI-driven SRE transformations, and architecting cloud-native platforms (like a Chaos Engineering SaaS on SAP BTP) that generated over $1M+ in recurring annual revenue.</p>
-                    <p>Working as a trusted engineering leader at organizations like <strong>Asahi Group Holdings</strong> and <strong>SAP Labs</strong>, he translates complex observability, compliance, and platform requirements into architecture decisions. His technical foundation spans distributed systems, GenAI/RAG, and SAP BTP, combined with the strategic fluency to translate architecture directly into P&L outcomes.</p>
+                    <p>Sreedhara is a Global Engineering Leader with 15+ years of experience directing cross-cultural teams across Japan, Australia, Europe, and India. He operates at the intersection of AI and enterprise engineering — delivering cloud-native platforms, AI-driven infrastructure, and digital transformation programmes that generate measurable business and financial impact.</p>
+                    <p>His executive track record includes building and scaling engineering organizations of up to 43 members — sourcing and developing talent across geographies — while managing product delivery at scale: reducing MTTR by 40% through AI-driven SRE transformations and architecting cloud-native platforms that generated over $1M+ in recurring annual revenue.</p>
+                    <p>Engaged as a trusted technical leader with global enterprises and Fortune-class technology organizations — translating complex observability, compliance, and platform requirements into architecture decisions. His foundation spans distributed systems, GenAI/RAG, and cloud-native platforms, combined with the strategic fluency to drive digital transformation roadmaps and translate architecture directly into P&L outcomes and board-level narratives.</p>
                   </div>
                   
                   <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
