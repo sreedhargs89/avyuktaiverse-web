@@ -43,7 +43,7 @@ export function Differentiators() {
       <div className="section-divider absolute top-0 left-0 right-0" />
 
       <Container>
-        <SectionHeading eyebrow="Why Avyukt AIverse®" title="Built on clarity, not cleverness." dark />
+        <SectionHeading eyebrow="Why AvyuktAIverse®" title="Built on clarity, not cleverness." dark />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {points.map((point, i) => (

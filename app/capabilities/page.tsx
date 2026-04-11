@@ -147,7 +147,7 @@ export default function CapabilitiesPage() {
       <section className="relative py-20 lg:py-28 border-t border-white/[0.05]" id="team" style={{ background: darkGrad }}>
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-16 reveal">
-            <Badge variant="muted" className="mb-6">The Avyukt Difference</Badge>
+            <Badge variant="muted" className="mb-6">The AvyuktAIverse Difference</Badge>
             <h2 className="text-3xl lg:text-4xl font-serif font-medium text-white mb-6">
               Experienced. Professional. <span className="gradient-text italic">Partners.</span>
             </h2>

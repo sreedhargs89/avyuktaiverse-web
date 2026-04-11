@@ -6,7 +6,7 @@ import { Differentiators } from "@/components/home/differentiators";
 import { CtaBanner } from "@/components/home/cta-banner";
 
 export const metadata: Metadata = {
-  title: "Avyukt AIverse® — Engineers who think. AI that helps.",
+  title: "AvyuktAIverse® — Engineers who think. AI that helps.",
   description:
     "AI-enabled engineers, architects, and delivery professionals who work alongside your teams to solve real problems. No hype. Just delivery.",
 };

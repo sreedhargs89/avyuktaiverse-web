@@ -7,7 +7,7 @@ import { Lightbulb, Rocket, Shield, Clock, User } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "The story, people, and values behind Avyukt AIverse® — built for durability, not speed.",
+  description: "The story, people, and values behind AvyuktAIverse® — built for durability, not speed.",
 };
 
 const heroGrad = "linear-gradient(160deg, #0c0a1d 0%, #151030 40%, #1a103a 100%)";
@@ -51,9 +51,9 @@ export default function AboutPage() {
       <section className="relative py-20 lg:py-28" style={{ background: darkGrad }}>
         <div className="section-divider absolute top-0 left-0 right-0" />
         <Container narrow>
-          <SectionHeading eyebrow="Our Story" title="Why Avyukt AIverse® exists." dark />
+          <SectionHeading eyebrow="Our Story" title="Why AvyuktAIverse® exists." dark />
           <div className="space-y-5 text-white/55 leading-relaxed text-lg">
-            <p>Avyukt AIverse® was started because we saw a consistent gap between what AI promises and what organisations actually need.</p>
+            <p>AvyuktAIverse® was started because we saw a consistent gap between what AI promises and what organisations actually need.</p>
             <p>The noise around AI is significant. Most of it is not useful to engineering leaders trying to ship reliable, valuable software under real constraints. There is a great deal of enthusiasm, a great deal of tooling, and not nearly enough experienced judgement about where AI actually belongs — and where it does not.</p>
             <p>We built this company to be useful in the places where hype is not enough. Where the problem is complex, the stakes are real, and the people involved need to actually know what they are doing.</p>
             <p>Our reputation will be built on the quality of our work, not the size of our marketing. That is a conscious choice, and we are comfortable with the pace it implies.</p>

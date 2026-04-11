@@ -1,8 +1,8 @@
-export const APP_VERSION = "v1.1.0";
+export const APP_VERSION = "v2.0.0";
 
 export const COMPANY = {
-  name: "Avyukt AIverse®",
-  legalName: "Avyukt AIverse® Private Limited",
+  name: "AvyuktAIverse®",
+  legalName: "AvyuktAIverse® Private Limited",
   tagline: "Engineers who think. AI that helps.",
   description:
     "AI-enabled engineers, architects, and delivery professionals who work alongside your teams to solve real problems.",

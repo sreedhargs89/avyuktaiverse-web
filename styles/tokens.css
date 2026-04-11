@@ -1,0 +1,134 @@
+/* ──────────────────────────────────────────────
+   AvyuktAIverse® — Design Tokens
+   Single source of truth for colour, type, motion.
+   Consumed by app/globals.css and Tailwind v4 @theme.
+   ────────────────────────────────────────────── */
+
+:root,
+[data-theme="dark"] {
+  /* ── Surfaces (dark-first) ─────────────────── */
+  --surface-0:   #06040f;   /* deepest — body bg */
+  --surface-1:   #0a0818;   /* section alt */
+  --surface-2:   #0c0a1d;   /* base surface */
+  --surface-3:   #110e28;   /* raised */
+  --surface-4:   #151030;   /* raised hover */
+  --surface-5:   #1a103a;   /* hero peak */
+
+  /* ── Accent (indigo → violet → magenta) ────── */
+  --accent-300:  #a5b4fc;
+  --accent-400:  #818cf8;
+  --accent-500:  #6366f1;
+  --accent-600:  #4f46e5;
+  --accent-700:  #4338ca;
+
+  --violet-400:  #a78bfa;
+  --violet-500:  #8b5cf6;
+  --violet-600:  #7c3aed;
+
+  --magenta-400: #f472b6;
+  --magenta-500: #ec4899;
+
+  /* ── Semantic ─────────────────────────────── */
+  --success:     #34d399;
+  --warning:     #f59e0b;
+  --danger:      #fb7185;
+  --info:        #22d3ee;
+
+  /* ── Foreground / text ────────────────────── */
+  --fg-0:        #ffffff;   /* pure white for headings */
+  --fg-1:        rgba(255,255,255,0.78);  /* primary body */
+  --fg-2:        rgba(255,255,255,0.55);  /* secondary */
+  --fg-3:        rgba(255,255,255,0.40);  /* tertiary */
+  --fg-4:        rgba(255,255,255,0.25);  /* quaternary / caption */
+  --fg-5:        rgba(255,255,255,0.10);  /* disabled */
+
+  /* ── Lines / borders ──────────────────────── */
+  --line-1:      rgba(255,255,255,0.06);
+  --line-2:      rgba(255,255,255,0.10);
+  --line-3:      rgba(255,255,255,0.18);
+
+  /* ── Radii ────────────────────────────────── */
+  --radius-xs:   6px;
+  --radius-sm:   10px;
+  --radius-md:   14px;
+  --radius-lg:   20px;
+  --radius-xl:   28px;
+  --radius-full: 9999px;
+
+  /* ── Shadow / glow ────────────────────────── */
+  --shadow-sm:   0 4px 12px rgba(0,0,0,0.35);
+  --shadow-md:   0 10px 30px rgba(0,0,0,0.45);
+  --shadow-lg:   0 25px 50px -12px rgba(0,0,0,0.55);
+  --glow-accent: 0 0 40px rgba(129,140,248,0.25);
+  --glow-violet: 0 0 40px rgba(168,139,250,0.22);
+  --glow-strong: 0 0 60px rgba(129,140,248,0.45);
+
+  /* ── Motion ───────────────────────────────── */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-xs:      140ms;
+  --dur-sm:      220ms;
+  --dur-md:      360ms;
+  --dur-lg:      560ms;
+  --dur-xl:      820ms;
+
+  /* ── Type ─────────────────────────────────── */
+  --text-xs:     0.75rem;   /* 12 */
+  --text-sm:     0.875rem;  /* 14 */
+  --text-base:   1rem;      /* 16 */
+  --text-md:     1.0625rem; /* 17 */
+  --text-lg:     1.125rem;  /* 18 */
+  --text-xl:     1.375rem;  /* 22 */
+  --text-2xl:    1.75rem;   /* 28 */
+  --text-3xl:    2.25rem;   /* 36 */
+  --text-4xl:    3rem;      /* 48 */
+  --text-5xl:    4rem;      /* 64 */
+
+  /* ── Gradients ────────────────────────────── */
+  --gradient-accent:
+    linear-gradient(135deg, #818cf8 0%, #a78bfa 40%, #c084fc 70%, #f472b6 100%);
+  --gradient-hero:
+    linear-gradient(160deg, #0c0a1d 0%, #151030 40%, #1a103a 100%);
+  --gradient-dark:
+    linear-gradient(160deg, #0a0818 0%, #110e28 100%);
+  --gradient-deep:
+    linear-gradient(160deg, #06040f 0%, #0c0a1d 100%);
+  --gradient-glow:
+    radial-gradient(circle at 50% 0%, rgba(129,140,248,0.18) 0%, transparent 60%);
+
+  /* ── Glass ───────────────────────────────── */
+  --glass-bg:      rgba(255,255,255,0.025);
+  --glass-bg-hover:rgba(255,255,255,0.05);
+  --glass-border:  rgba(255,255,255,0.08);
+  --glass-border-hover: rgba(129,140,248,0.30);
+
+  /* ── Legacy aliases (kept for existing components) ── */
+  --primary:       var(--accent-400);
+  --primary-dark:  var(--accent-500);
+  --primary-deep:  var(--accent-600);
+  --secondary:     var(--warning);
+  --green:         var(--success);
+  --cyan:          var(--info);
+  --rose:          var(--danger);
+  --dark:          var(--surface-2);
+  --dark-mid:      var(--surface-4);
+  --deeper:        var(--surface-1);
+  --deeper-mid:    var(--surface-3);
+  --accent:        var(--accent-400);
+  --accent-dark:   var(--accent-500);
+  --gold:          var(--warning);
+  --hero-bg:       var(--surface-2);
+  --dark-surface:  var(--surface-1);
+  --dark-alt:      var(--surface-0);
+  --body-text:     var(--fg-2);
+  --brand:         var(--surface-2);
+  --white:         var(--fg-0);
+  --muted:         var(--fg-3);
+  --line:          var(--line-2);
+  --surface:       #f8fafc;
+  --surface-alt:   #f1f5f9;
+  --gradient-primary: var(--gradient-accent);
+  --gradient-alt:
+    linear-gradient(160deg, var(--surface-2) 0%, var(--surface-1) 100%);
+}

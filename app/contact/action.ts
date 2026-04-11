@@ -1,44 +1,69 @@
 "use server";
 
 import { Resend } from "resend";
+import { contactFormSchema } from "@/lib/validation/contact";
+import { COMPANY } from "@/lib/constants";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-const TO_EMAIL = "contact@avyuktaiverse.com";
+const TO_EMAIL = process.env.CONTACT_TO_EMAIL ?? "contact@avyuktaiverse.com";
+const FROM_EMAIL =
+  process.env.CONTACT_FROM_EMAIL ?? "AvyuktAIverse Website <onboarding@resend.dev>";
 
 export interface ContactFormState {
   status: "idle" | "success" | "error";
   message?: string;
+  fieldErrors?: Partial<Record<"name" | "email" | "company" | "message", string>>;
 }
 
 export async function submitContactForm(
   _prev: ContactFormState,
   formData: FormData
 ): Promise<ContactFormState> {
-  const name = String(formData.get("name") ?? "").trim();
-  const email = String(formData.get("email") ?? "").trim();
-  const company = String(formData.get("company") ?? "").trim();
-  const message = String(formData.get("message") ?? "").trim();
+  // Honeypot: bots fill hidden fields. Return silent success to not reveal the trap.
   const honeypot = String(formData.get("website") ?? "").trim();
-
-  // Honeypot: bots fill hidden fields
   if (honeypot) {
     return { status: "success" };
   }
 
-  if (!name || !email || !message) {
-    return { status: "error", message: "Please fill in all required fields." };
+  const parsed = contactFormSchema.safeParse({
+    name: String(formData.get("name") ?? ""),
+    email: String(formData.get("email") ?? ""),
+    company: String(formData.get("company") ?? ""),
+    message: String(formData.get("message") ?? ""),
+  });
+
+  if (!parsed.success) {
+    const fieldErrors: ContactFormState["fieldErrors"] = {};
+    for (const issue of parsed.error.issues) {
+      const key = issue.path[0];
+      if (typeof key === "string" && !fieldErrors[key as keyof typeof fieldErrors]) {
+        fieldErrors[key as keyof typeof fieldErrors] = issue.message;
+      }
+    }
+    return {
+      status: "error",
+      message: "Please fix the highlighted fields and try again.",
+      fieldErrors,
+    };
   }
 
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    return { status: "error", message: "Please enter a valid email address." };
+  const { name, email, company, message } = parsed.data;
+
+  if (!process.env.RESEND_API_KEY) {
+    // In local dev without a key, log and pretend success so the UI is testable.
+    console.warn(
+      "[contact] RESEND_API_KEY missing — form submission logged only:",
+      { name, email, company, message }
+    );
+    return { status: "success" };
   }
 
   try {
+    const resend = new Resend(process.env.RESEND_API_KEY);
     await resend.emails.send({
-      from: "Avyukt AIverse Website <onboarding@resend.dev>",
+      from: FROM_EMAIL,
       to: TO_EMAIL,
       replyTo: email,
-      subject: `New enquiry from ${name}${company ? ` at ${company}` : ""}`,
+      subject: `New enquiry from ${name}${company ? ` at ${company}` : ""} — ${COMPANY.name}`,
       text: [
         `Name: ${name}`,
         `Email: ${email}`,
@@ -53,10 +78,10 @@ export async function submitContactForm(
 
     return { status: "success" };
   } catch (err) {
-    console.error("Contact form error:", err);
+    console.error("[contact] Resend send failed:", err);
     return {
       status: "error",
-      message: "Something went wrong. Please email us directly.",
+      message: `Something went wrong. Please email us directly at ${TO_EMAIL}.`,
     };
   }
 }

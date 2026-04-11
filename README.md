@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AvyuktAIverse® — Website
 
-## Getting Started
+Marketing website for **AvyuktAIverse® Private Limited**.
+Built with Next.js 16 (App Router), React 19, and Tailwind v4.
 
-First, run the development server:
+> *"Engineers who think. AI that helps."*
+
+---
+
+## Tech stack
+
+| Layer          | Choice                                              |
+| -------------- | --------------------------------------------------- |
+| Framework      | Next.js 16 App Router (Server Components default)   |
+| Runtime        | Node.js 20+                                         |
+| UI             | React 19, Tailwind v4, custom token system          |
+| Content        | TSX pages + (planned) MDX for Insights/Case Studies |
+| Forms          | React 19 Server Actions + Zod validation            |
+| Email          | Resend                                              |
+| Hosting        | Vercel (Fluid Compute)                              |
+| Package mgr    | pnpm                                                |
+
+## Prerequisites
+
+- **Node.js** 20 LTS or newer (`.nvmrc` pins `20`)
+- **pnpm** 9+
+  ```bash
+  corepack enable
+  corepack prepare pnpm@latest --activate
+  ```
+- A **Resend** API key *(optional in dev — the contact form logs to console when missing)*
+
+## Quick start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# 1. Clone and install
+git clone git@github.com:sreedhargs89/avyuktaiverse-web.git
+cd avyuktaiverse-web
+pnpm install
+
+# 2. Configure environment
+cp .env.example .env.local
+# open .env.local and fill in any values you need
+
+# 3. Run the dev server
 pnpm dev
-# or
-bun dev
+# → http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Command           | What it does                                  |
+| ----------------- | --------------------------------------------- |
+| `pnpm dev`        | Start Next.js dev server on port 3000         |
+| `pnpm build`      | Production build                              |
+| `pnpm start`      | Serve the production build                    |
+| `pnpm lint`       | Run ESLint (flat config)                      |
+| `pnpm typecheck`  | `tsc --noEmit`                                |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project structure
 
-## Learn More
+```
+app/                # Next.js App Router routes
+  page.tsx          # Home
+  about/            # About
+  capabilities/     # Capabilities
+  how-we-work/      # Process
+  insights/         # Insights (coming soon)
+  contact/          # Contact page + server action
+  privacy/          # Privacy policy
+  layout.tsx        # Root layout (metadata, fonts, JSON-LD)
+  globals.css       # Tokens + Tailwind + base styles
 
-To learn more about Next.js, take a look at the following resources:
+components/
+  home/             # Homepage sections (hero, problem, etc.)
+  layout/           # Header, footer, container, mobile menu
+  ui/               # Reusable primitives (button, badge, logo…)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+lib/
+  constants.ts      # Company info, nav links, brand constants
+  utils.ts          # cn() and helpers
+  seo.ts            # Metadata + JSON-LD helpers
+  validation/       # Zod schemas
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+hooks/              # Client hooks (scroll reveal…)
+public/             # Static assets
+styles/             # Design tokens (imported by globals.css)
+```
 
-## Deploy on Vercel
+## Environment variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+See [`.env.example`](./.env.example). All variables are documented inline there.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Brand
+
+The official brand name is **AvyuktAIverse®** (one word, capital `A` and `I`, registered trademark).
+Do not split it to "Avyukt AIverse". The only acceptable lowercase form is in DNS
+and URLs: `avyuktaiverse.com`.
+
+## License
+
+Proprietary. © AvyuktAIverse® Private Limited. All rights reserved.
