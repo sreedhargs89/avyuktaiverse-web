@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/hooks/use-scroll-reveal";
+import { ScrollProgress } from "@/components/ui/scroll-progress";
 import { COMPANY } from "@/lib/constants";
 import { organizationJsonLd } from "@/lib/seo";
 
@@ -86,6 +87,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd()) }}
         />
         <ScrollReveal />
+        <ScrollProgress />
         <Header />
         <main id="main-content" className="flex-1">{children}</main>
         <Footer />

@@ -48,47 +48,68 @@ export function Hero() {
       <Container className="relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           <div>
-            <div className="mb-6">
+            <div className="mb-6 animate-fade-in-up" style={{ animationDelay: "60ms" }}>
               <Badge variant="pulse">
                 <Sparkles size={12} className="mr-1.5" />
                 AI-Enabled Capability Extension
               </Badge>
             </div>
 
-            <h1 className="font-serif font-bold text-white mb-6 leading-tight"
-              style={{ fontSize: "clamp(2.6rem, 6.5vw, 4.2rem)" }}>
+            <h1
+              className="font-serif font-bold text-white mb-6 leading-[1.05] animate-fade-in-up"
+              style={{
+                fontSize: "clamp(2.6rem, 6.5vw, 4.4rem)",
+                animationDelay: "140ms",
+              }}
+            >
               Engineering capability,{" "}
               <span className="gradient-text italic">extended intelligently.</span>
             </h1>
 
-            <p className="text-lg lg:text-xl text-white/55 leading-relaxed max-w-xl mb-10">
+            <p
+              className="text-lg lg:text-xl text-white/55 leading-relaxed max-w-xl mb-10 animate-fade-in-up"
+              style={{ animationDelay: "240ms" }}
+            >
               We work alongside your engineering teams — as architects, engineers,
               and delivery leads — bringing AI-enabled capability where you need it
               most. No hype. No shortcuts. Just people who know what they are doing.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-14">
-              <Link href="/capabilities"
-                className="btn-gradient inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-sans font-semibold">
+            <div
+              className="flex flex-col sm:flex-row gap-4 mb-14 animate-fade-in-up"
+              style={{ animationDelay: "340ms" }}
+            >
+              <Link
+                href="/capabilities"
+                className="btn-gradient inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-sans font-semibold"
+              >
                 <span className="relative z-10 inline-flex items-center gap-2">
-                  See Our Capabilities <ArrowRight size={16} />
+                  See Our Capabilities{" "}
+                  <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                 </span>
               </Link>
-              <Link href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/[0.04] text-white border border-white/15 rounded-xl font-sans font-medium hover:bg-white/[0.08] hover:border-white/30 transition-all duration-300">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/[0.04] text-white border border-white/15 rounded-xl font-sans font-medium hover:bg-white/[0.08] hover:border-white/30 hover:-translate-y-0.5 transition-all duration-300"
+              >
                 Get in Touch
               </Link>
             </div>
 
             {/* Stat strip — animated */}
-            <div className="flex flex-col sm:flex-row gap-6 sm:gap-0">
+            <div
+              className="flex flex-col sm:flex-row gap-6 sm:gap-0 animate-fade-in-up"
+              style={{ animationDelay: "460ms" }}
+            >
               {[
                 { value: "3", label: "Engagement Models" },
                 { value: "AI", label: "Enabled Delivery" },
                 { value: "Trust", label: "First Approach" },
               ].map((stat, i) => (
-                <div key={stat.label}
-                  className={i > 0 ? "sm:pl-8 sm:ml-8 sm:border-l sm:border-white/10" : ""}>
+                <div
+                  key={stat.label}
+                  className={i > 0 ? "sm:pl-8 sm:ml-8 sm:border-l sm:border-white/10" : ""}
+                >
                   <p className="font-serif text-2xl font-bold text-white stat-glow">{stat.value}</p>
                   <p className="text-xs text-white/35 font-sans uppercase tracking-wider mt-1">{stat.label}</p>
                 </div>
