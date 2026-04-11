@@ -27,7 +27,7 @@ export function Button({
         variant === "primary" && "btn-gradient",
         variant === "secondary" && "bg-transparent text-white border border-white/20 hover:border-white/50 hover:bg-white/5 rounded-xl",
         variant === "ghost" && "bg-transparent text-accent border border-transparent hover:text-accent-dark",
-        variant === "glow" && "bg-transparent text-accent border border-accent/40 hover:bg-accent/10 hover:border-accent hover:shadow-[0_0_20px_rgba(99,102,241,0.4)] rounded-xl",
+        variant === "glow" && "bg-transparent text-accent border border-accent/40 hover:bg-accent/10 hover:border-accent hover:shadow-[0_0_20px_rgba(204,255,0,0.45)] rounded-xl",
         sizes[size],
         className
       )}

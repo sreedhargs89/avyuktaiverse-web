@@ -5,9 +5,9 @@ import { Scale, Rocket, TrendingUp, Cpu } from "lucide-react";
 const points = [
   {
     Icon: Scale,
-    color: "#818cf8",
-    bg: "rgba(129,140,248,0.10)",
-    borderColor: "rgba(129,140,248,0.15)",
+    color: "#CCFF00",
+    bg: "rgba(204,255,0,0.08)",
+    borderColor: "rgba(204,255,0,0.28)",
     title: "Judgement over hype",
     description: "We evaluate every AI application on its actual merit. If it adds genuine value, we use it. If it adds noise, we do not.",
   },
@@ -29,9 +29,9 @@ const points = [
   },
   {
     Icon: Cpu,
-    color: "#c084fc",
-    bg: "rgba(192,132,252,0.10)",
-    borderColor: "rgba(192,132,252,0.15)",
+    color: "#7EA5FF",
+    bg: "rgba(126,165,255,0.08)",
+    borderColor: "rgba(126,165,255,0.24)",
     title: "AI as enabler, not answer",
     description: "AI is a powerful tool in the hands of skilled practitioners. We never substitute it for engineering judgement or accountability.",
   },
@@ -39,7 +39,7 @@ const points = [
 
 export function Differentiators() {
   return (
-    <section className="relative py-20 lg:py-28" style={{ background: "linear-gradient(160deg, #0a0818 0%, #110e28 100%)" }}>
+    <section className="relative py-20 lg:py-28" style={{ background: "var(--gradient-dark)" }}>
       <div className="section-divider absolute top-0 left-0 right-0" />
 
       <Container>

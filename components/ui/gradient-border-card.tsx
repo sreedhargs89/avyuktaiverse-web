@@ -9,7 +9,7 @@ interface GradientBorderCardProps {
 export function GradientBorderCard({
   children,
   className,
-  glowColor = "rgba(99, 102, 241, 0.4)",
+  glowColor = "rgba(204, 255, 0, 0.45)",
 }: GradientBorderCardProps) {
   return (
     <div className={cn("gradient-border-card", className)}

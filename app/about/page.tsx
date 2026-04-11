@@ -10,14 +10,14 @@ export const metadata: Metadata = {
   description: "The story, people, and values behind AvyuktAIverse® — built for durability, not speed.",
 };
 
-const heroGrad = "linear-gradient(160deg, #0c0a1d 0%, #151030 40%, #1a103a 100%)";
-const darkGrad = "linear-gradient(160deg, #0a0818 0%, #110e28 100%)";
+const heroGrad = "var(--gradient-hero)";
+const darkGrad = "var(--gradient-dark)";
 
 const values = [
-  { Icon: Lightbulb, color: "#818cf8", bg: "rgba(129,140,248,0.08)", borderColor: "rgba(129,140,248,0.15)", title: "Clarity over cleverness", description: "We say what we mean. In our work, in our communication, and in how we represent what AI can and cannot do." },
+  { Icon: Lightbulb, color: "#CCFF00", bg: "rgba(204,255,0,0.08)", borderColor: "rgba(204,255,0,0.2)", title: "Clarity over cleverness", description: "We say what we mean. In our work, in our communication, and in how we represent what AI can and cannot do." },
   { Icon: Rocket, color: "#f59e0b", bg: "rgba(245,158,11,0.08)", borderColor: "rgba(245,158,11,0.15)", title: "Delivery over demos", description: "We measure our worth by what actually ships and works in production — not by what looks impressive in a presentation." },
   { Icon: Shield, color: "#34d399", bg: "rgba(52,211,153,0.08)", borderColor: "rgba(52,211,153,0.15)", title: "Responsibility with technology", description: "AI is powerful. Applying it carelessly causes real harm. We take that seriously, and it shapes every engagement decision we make." },
-  { Icon: Clock, color: "#c084fc", bg: "rgba(192,132,252,0.08)", borderColor: "rgba(192,132,252,0.15)", title: "Long-term thinking", description: "We are building a company designed to last. That means making decisions we can stand behind a decade from now, not just this quarter." },
+  { Icon: Clock, color: "#7EA5FF", bg: "rgba(126,165,255,0.08)", borderColor: "rgba(126,165,255,0.2)", title: "Long-term thinking", description: "We are building a company designed to last. That means making decisions we can stand behind a decade from now, not just this quarter." },
 ];
 
 export default function AboutPage() {
@@ -25,11 +25,11 @@ export default function AboutPage() {
     <>
       <section className="relative overflow-hidden py-24 lg:py-32" style={{ background: heroGrad }}>
         <div className="hero-shape w-[380px] h-[380px]"
-          style={{ background: "#c084fc", opacity: 0.08, top: "-80px", right: "-60px", animation: "float-slow 9s ease-in-out infinite" }} />
+          style={{ background: "#7EA5FF", opacity: 0.08, top: "-80px", right: "-60px", animation: "float-slow 9s ease-in-out infinite" }} />
         <div className="hero-shape w-[260px] h-[260px]"
-          style={{ background: "#6366f1", opacity: 0.07, bottom: "-60px", left: "30%", animation: "float 7s ease-in-out infinite" }} />
+          style={{ background: "#1B3A4B", opacity: 0.07, bottom: "-60px", left: "30%", animation: "float 7s ease-in-out infinite" }} />
 
-        <div className="absolute inset-0 opacity-[0.02]"
+        <div className="absolute inset-0 opacity-[0.05]"
           style={{
             backgroundImage: "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
             backgroundSize: "80px 80px"
@@ -88,15 +88,15 @@ export default function AboutPage() {
             <div className="gradient-border-card-inner p-8 lg:p-12">
               <div className="flex flex-col lg:flex-row gap-10">
                 <div className="lg:w-1/3 flex-shrink-0">
-                  <div className="w-20 h-20 rounded-full flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(129,140,248,0.15)]"
-                    style={{ background: "rgba(129,140,248,0.1)", border: "1px solid rgba(129,140,248,0.2)" }}>
-                    <User size={32} style={{ color: "#818cf8" }} />
+                  <div className="w-20 h-20 rounded-full flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(204,255,0,0.18)]"
+                    style={{ background: "rgba(204,255,0,0.08)", border: "1px solid rgba(204,255,0,0.25)" }}>
+                    <User size={32} style={{ color: "#CCFF00" }} />
                   </div>
                   <h3 className="font-serif font-bold text-white text-2xl mb-1 mt-4">{FOUNDER.name}</h3>
                   <p className="text-xs mb-6 gradient-text font-semibold uppercase tracking-widest">{FOUNDER.role}</p>
                   <div className="flex flex-col gap-3 text-white/50 text-sm">
                     <p className="flex items-center gap-2">
-                       <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 opacity-80"></span>
+                       <span className="w-1.5 h-1.5 rounded-full bg-[#CCFF00] opacity-80"></span>
                        15+ Years Global Experience
                     </p>
                     <p className="flex items-center gap-2">
@@ -104,7 +104,7 @@ export default function AboutPage() {
                        AI & Digital Transformation
                     </p>
                     <p className="flex items-center gap-2">
-                       <span className="w-1.5 h-1.5 rounded-full bg-purple-400 opacity-80"></span>
+                       <span className="w-1.5 h-1.5 rounded-full bg-[#7EA5FF] opacity-80"></span>
                        Global Talent & Org Building
                     </p>
                     <p className="flex items-center gap-2">
@@ -123,20 +123,20 @@ export default function AboutPage() {
                   
                   <div className="mt-8 grid grid-cols-2 gap-4">
                      <div className="p-5 rounded-xl glass-card transition-colors duration-300 hover:bg-white/[0.04]">
-                       <p className="text-3xl font-bold text-white mb-1" style={{ fontFamily: "var(--font-playfair)" }}>¥1.3B</p>
+                       <p className="text-3xl font-bold text-white mb-1" style={{ fontFamily: "var(--font-fraunces)" }}>¥1.3B</p>
                        <p className="text-xs text-white/40 uppercase tracking-widest font-semibold">Vendor Cost Avoidance</p>
                      </div>
                      <div className="p-5 rounded-xl glass-card transition-colors duration-300 hover:bg-white/[0.04]">
-                       <p className="text-3xl font-bold text-white mb-1" style={{ fontFamily: "var(--font-playfair)" }}>$1M+</p>
+                       <p className="text-3xl font-bold text-white mb-1" style={{ fontFamily: "var(--font-fraunces)" }}>$1M+</p>
                        <p className="text-xs text-white/40 uppercase tracking-widest font-semibold">SaaS Product ARR</p>
                      </div>
                      <div className="p-5 rounded-xl glass-card transition-colors duration-300 hover:bg-white/[0.04]">
-                       <p className="text-3xl font-bold text-white mb-1" style={{ fontFamily: "var(--font-playfair)" }}>40%</p>
+                       <p className="text-3xl font-bold text-white mb-1" style={{ fontFamily: "var(--font-fraunces)" }}>40%</p>
                        <p className="text-xs text-white/40 uppercase tracking-widest font-semibold">MTTR Reduction</p>
                        <p className="text-[11px] text-white/25 mt-1">AI-Driven SRE</p>
                      </div>
                      <div className="p-5 rounded-xl glass-card transition-colors duration-300 hover:bg-white/[0.04]">
-                       <p className="text-3xl font-bold text-white mb-1" style={{ fontFamily: "var(--font-playfair)" }}>50%</p>
+                       <p className="text-3xl font-bold text-white mb-1" style={{ fontFamily: "var(--font-fraunces)" }}>50%</p>
                        <p className="text-xs text-white/40 uppercase tracking-widest font-semibold">Operational Cost Savings</p>
                        <p className="text-[11px] text-white/25 mt-1">AI-Driven SRE</p>
                      </div>
@@ -151,7 +151,7 @@ export default function AboutPage() {
       <section className="relative py-16" style={{ background: heroGrad }}>
         <div className="section-divider absolute top-0 left-0 right-0" />
         <Container narrow>
-          <p className="text-xs font-sans font-semibold uppercase tracking-widest mb-6" style={{ color: "#818cf8" }}>Company Details</p>
+          <p className="text-xs font-sans font-semibold uppercase tracking-widest mb-6" style={{ color: "#CCFF00" }}>Company Details</p>
           <dl className="space-y-3 text-sm">
             {[["Legal name", COMPANY.legalName], ["Country", "India"], ["Website", COMPANY.domain], ["Contact", COMPANY.email]].map(([label, value]) => (
               <div key={label} className="flex gap-4">

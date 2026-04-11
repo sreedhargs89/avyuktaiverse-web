@@ -7,7 +7,7 @@ export function Logo({ className }: { className?: string }) {
       className={`inline-flex items-baseline group ${className ?? ""}`}
       aria-label="AvyuktAIverse® — Home"
     >
-      <span className="font-serif text-xl font-medium text-white tracking-tight transition-colors duration-300 group-hover:text-[var(--color-accent,#818cf8)]">
+      <span className="font-serif text-xl font-medium text-white tracking-tight transition-colors duration-300 group-hover:text-[var(--color-accent,#CCFF00)]">
         Avyukt
       </span>
       <span className="font-sans text-xl font-light text-accent tracking-tight">

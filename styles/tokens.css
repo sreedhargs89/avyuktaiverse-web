@@ -1,67 +1,79 @@
 /* ──────────────────────────────────────────────
    AvyuktAIverse® — Design Tokens
+   Direction: LUMEN — lab-precision dark + acid lime
    Single source of truth for colour, type, motion.
    Consumed by app/globals.css and Tailwind v4 @theme.
    ────────────────────────────────────────────── */
 
 :root,
 [data-theme="dark"] {
-  /* ── Surfaces (dark-first) ─────────────────── */
-  --surface-0:   #06040f;   /* deepest — body bg */
-  --surface-1:   #0a0818;   /* section alt */
-  --surface-2:   #0c0a1d;   /* base surface */
-  --surface-3:   #110e28;   /* raised */
-  --surface-4:   #151030;   /* raised hover */
-  --surface-5:   #1a103a;   /* hero peak */
+  /* ── Surfaces — midnight violet (warm dark) ─── */
+  --surface-0:   #050314;   /* deepest — body */
+  --surface-1:   #0A0720;   /* section alt */
+  --surface-2:   #0F0B2A;   /* base surface */
+  --surface-3:   #141034;   /* raised */
+  --surface-4:   #1A1540;   /* raised hover */
+  --surface-5:   #221B52;   /* peak */
 
-  /* ── Accent (indigo → violet → magenta) ────── */
-  --accent-300:  #a5b4fc;
-  --accent-400:  #818cf8;
-  --accent-500:  #6366f1;
-  --accent-600:  #4f46e5;
-  --accent-700:  #4338ca;
+  /* ── Primary accent — acid lime ────────────── */
+  --lime-300:    #E0FF5A;
+  --lime-400:    #CCFF00;   /* the one accent */
+  --lime-500:    #A8D000;
+  --lime-600:    #7F9E00;
+  --lime-700:    #5E7600;
 
-  --violet-400:  #a78bfa;
-  --violet-500:  #8b5cf6;
-  --violet-600:  #7c3aed;
+  /* ── Secondary — cool steel (atmospheric) ──── */
+  --steel-300:   #A5C2FF;
+  --steel-400:   #7EA5FF;
+  --steel-500:   #4A6FD6;
+  --steel-600:   #2F4DA3;
 
-  --magenta-400: #f472b6;
-  --magenta-500: #ec4899;
+  /* ── Tertiary — deep teal (depth) ──────────── */
+  --teal-400:    #3A8A9E;
+  --teal-500:    #1B3A4B;
+  --teal-600:    #0F2632;
+
+  /* ── Warm sand — human warmth (sparingly) ──── */
+  --sand-100:    #F5E9DA;
+  --sand-200:    #E8D9C2;
+  --sand-300:    #D4BFA0;
 
   /* ── Semantic ─────────────────────────────── */
-  --success:     #34d399;
-  --warning:     #f59e0b;
-  --danger:      #fb7185;
-  --info:        #22d3ee;
+  --success:     #4ADE80;
+  --warning:     #FFB020;
+  --danger:      #FF6B6B;
+  --info:        #7EA5FF;
 
   /* ── Foreground / text ────────────────────── */
-  --fg-0:        #ffffff;   /* pure white for headings */
-  --fg-1:        rgba(255,255,255,0.78);  /* primary body */
-  --fg-2:        rgba(255,255,255,0.55);  /* secondary */
-  --fg-3:        rgba(255,255,255,0.40);  /* tertiary */
-  --fg-4:        rgba(255,255,255,0.25);  /* quaternary / caption */
-  --fg-5:        rgba(255,255,255,0.10);  /* disabled */
+  --fg-0:        #F2F5FA;   /* cool white for headings */
+  --fg-1:        rgba(242, 245, 250, 0.84);  /* primary body */
+  --fg-2:        rgba(242, 245, 250, 0.62);  /* secondary */
+  --fg-3:        rgba(242, 245, 250, 0.44);  /* tertiary */
+  --fg-4:        rgba(242, 245, 250, 0.28);  /* quaternary / caption */
+  --fg-5:        rgba(242, 245, 250, 0.12);  /* disabled */
 
   /* ── Lines / borders ──────────────────────── */
-  --line-1:      rgba(255,255,255,0.06);
-  --line-2:      rgba(255,255,255,0.10);
-  --line-3:      rgba(255,255,255,0.18);
+  --line-1:      rgba(204, 255, 0, 0.06);
+  --line-2:      rgba(204, 255, 0, 0.10);
+  --line-3:      rgba(204, 255, 0, 0.20);
+  --line-neutral-1: rgba(242, 245, 250, 0.06);
+  --line-neutral-2: rgba(242, 245, 250, 0.10);
 
   /* ── Radii ────────────────────────────────── */
-  --radius-xs:   6px;
-  --radius-sm:   10px;
-  --radius-md:   14px;
-  --radius-lg:   20px;
-  --radius-xl:   28px;
+  --radius-xs:   4px;
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   18px;
+  --radius-xl:   24px;
   --radius-full: 9999px;
 
   /* ── Shadow / glow ────────────────────────── */
-  --shadow-sm:   0 4px 12px rgba(0,0,0,0.35);
-  --shadow-md:   0 10px 30px rgba(0,0,0,0.45);
-  --shadow-lg:   0 25px 50px -12px rgba(0,0,0,0.55);
-  --glow-accent: 0 0 40px rgba(129,140,248,0.25);
-  --glow-violet: 0 0 40px rgba(168,139,250,0.22);
-  --glow-strong: 0 0 60px rgba(129,140,248,0.45);
+  --shadow-sm:   0 4px 14px rgba(0,0,0,0.45);
+  --shadow-md:   0 12px 32px rgba(0,0,0,0.55);
+  --shadow-lg:   0 28px 60px -12px rgba(0,0,0,0.65);
+  --glow-accent: 0 0 40px rgba(204, 255, 0, 0.22);
+  --glow-violet: 0 0 40px rgba(126, 165, 255, 0.18);
+  --glow-strong: 0 0 72px rgba(204, 255, 0, 0.40);
 
   /* ── Motion ───────────────────────────────── */
   --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
@@ -73,50 +85,86 @@
   --dur-lg:      560ms;
   --dur-xl:      820ms;
 
-  /* ── Type ─────────────────────────────────── */
-  --text-xs:     0.75rem;   /* 12 */
-  --text-sm:     0.875rem;  /* 14 */
-  --text-base:   1rem;      /* 16 */
-  --text-md:     1.0625rem; /* 17 */
-  --text-lg:     1.125rem;  /* 18 */
-  --text-xl:     1.375rem;  /* 22 */
-  --text-2xl:    1.75rem;   /* 28 */
-  --text-3xl:    2.25rem;   /* 36 */
-  --text-4xl:    3rem;      /* 48 */
-  --text-5xl:    4rem;      /* 64 */
+  /* ── Type scale ───────────────────────────── */
+  --text-xs:     0.75rem;    /* 12 */
+  --text-sm:     0.8125rem;  /* 13 */
+  --text-base:   0.9375rem;  /* 15 — tight Geist body */
+  --text-md:     1.0625rem;  /* 17 */
+  --text-lg:     1.1875rem;  /* 19 */
+  --text-xl:     1.5rem;     /* 24 */
+  --text-2xl:    2rem;       /* 32 */
+  --text-3xl:    2.75rem;    /* 44 */
+  --text-4xl:    3.75rem;    /* 60 */
+  --text-5xl:    5.25rem;    /* 84 — hero display */
 
   /* ── Gradients ────────────────────────────── */
   --gradient-accent:
-    linear-gradient(135deg, #818cf8 0%, #a78bfa 40%, #c084fc 70%, #f472b6 100%);
+    linear-gradient(135deg, #CCFF00 0%, #E0FF5A 35%, #7EA5FF 100%);
+  --gradient-accent-soft:
+    linear-gradient(135deg, rgba(204, 255, 0, 0.90) 0%, rgba(126, 165, 255, 0.75) 100%);
+
+  /* Hero — dramatic radial bloom mesh (lime sunrise TR, steel cool BL, sand warm ML) */
   --gradient-hero:
-    linear-gradient(160deg, #0c0a1d 0%, #151030 40%, #1a103a 100%);
+    radial-gradient(1400px 900px at 85% 8%,  rgba(204, 255, 0, 0.22) 0%, transparent 55%),
+    radial-gradient(1100px 800px at 12% 88%, rgba(126, 165, 255, 0.20) 0%, transparent 60%),
+    radial-gradient(900px 700px at 20% 40%,  rgba(245, 233, 218, 0.08) 0%, transparent 55%),
+    radial-gradient(1600px 1200px at 50% 50%, #0F0B2A 0%, #050314 75%);
+
+  /* Dark — section alternate, subtler single bloom */
   --gradient-dark:
-    linear-gradient(160deg, #0a0818 0%, #110e28 100%);
+    radial-gradient(1000px 700px at 90% 10%, rgba(204, 255, 0, 0.13) 0%, transparent 60%),
+    linear-gradient(165deg, #0A0720 0%, #0F0B2A 100%);
+
+  /* Deep — footer/modal base */
   --gradient-deep:
-    linear-gradient(160deg, #06040f 0%, #0c0a1d 100%);
+    radial-gradient(800px 600px at 50% 0%, rgba(126, 165, 255, 0.10) 0%, transparent 60%),
+    linear-gradient(160deg, #050314 0%, #0A0720 100%);
+
   --gradient-glow:
-    radial-gradient(circle at 50% 0%, rgba(129,140,248,0.18) 0%, transparent 60%);
+    radial-gradient(circle at 50% 0%, rgba(204, 255, 0, 0.16) 0%, transparent 60%);
+
+  /* Mesh — full four-source mesh for destination pages */
+  --gradient-mesh:
+    radial-gradient(1300px 800px at 8% 12%,  rgba(126, 165, 255, 0.24) 0%, transparent 58%),
+    radial-gradient(1100px 700px at 92% 88%, rgba(204, 255, 0, 0.22) 0%, transparent 55%),
+    radial-gradient(900px 600px at 50% 50%,  rgba(245, 233, 218, 0.09) 0%, transparent 60%),
+    radial-gradient(1800px 1400px at 50% 50%, #0F0B2A 0%, #050314 80%);
+
+  /* Vignette — optional overlay to protect legibility over blooms */
+  --vignette:
+    radial-gradient(ellipse 1000px 600px at 50% 50%, transparent 0%, rgba(5, 3, 20, 0.35) 100%);
 
   /* ── Glass ───────────────────────────────── */
-  --glass-bg:      rgba(255,255,255,0.025);
-  --glass-bg-hover:rgba(255,255,255,0.05);
-  --glass-border:  rgba(255,255,255,0.08);
-  --glass-border-hover: rgba(129,140,248,0.30);
+  --glass-bg:         rgba(242, 245, 250, 0.02);
+  --glass-bg-hover:   rgba(242, 245, 250, 0.04);
+  --glass-border:     rgba(242, 245, 250, 0.08);
+  --glass-border-hover: rgba(204, 255, 0, 0.28);
 
-  /* ── Legacy aliases (kept for existing components) ── */
-  --primary:       var(--accent-400);
-  --primary-dark:  var(--accent-500);
-  --primary-deep:  var(--accent-600);
+  /* ── Legacy aliases (existing components) ─── */
+  /* Existing code references --accent-400 etc. — repoint to lime */
+  --accent-300:  var(--lime-300);
+  --accent-400:  var(--lime-400);
+  --accent-500:  var(--lime-500);
+  --accent-600:  var(--lime-600);
+  --accent-700:  var(--lime-700);
+  --violet-400:  var(--steel-400);
+  --violet-500:  var(--steel-500);
+  --violet-600:  var(--steel-600);
+  --magenta-400: var(--sand-100);
+  --magenta-500: var(--sand-200);
+  --primary:       var(--lime-400);
+  --primary-dark:  var(--lime-500);
+  --primary-deep:  var(--lime-600);
   --secondary:     var(--warning);
   --green:         var(--success);
-  --cyan:          var(--info);
+  --cyan:          var(--steel-400);
   --rose:          var(--danger);
   --dark:          var(--surface-2);
   --dark-mid:      var(--surface-4);
   --deeper:        var(--surface-1);
   --deeper-mid:    var(--surface-3);
-  --accent:        var(--accent-400);
-  --accent-dark:   var(--accent-500);
+  --accent:        var(--lime-400);
+  --accent-dark:   var(--lime-500);
   --gold:          var(--warning);
   --hero-bg:       var(--surface-2);
   --dark-surface:  var(--surface-1);
@@ -125,9 +173,9 @@
   --brand:         var(--surface-2);
   --white:         var(--fg-0);
   --muted:         var(--fg-3);
-  --line:          var(--line-2);
-  --surface:       #f8fafc;
-  --surface-alt:   #f1f5f9;
+  --line:          var(--line-neutral-2);
+  --surface:       #F2F5FA;
+  --surface-alt:   #E8ECF1;
   --gradient-primary: var(--gradient-accent);
   --gradient-alt:
     linear-gradient(160deg, var(--surface-2) 0%, var(--surface-1) 100%);

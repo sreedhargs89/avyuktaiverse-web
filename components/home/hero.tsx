@@ -10,33 +10,21 @@ export function Hero() {
     <section
       className="relative overflow-hidden"
       style={{
-        background: "linear-gradient(160deg, #0c0a1d 0%, #151030 40%, #1a103a 100%)",
+        background: "var(--gradient-hero)",
         paddingTop: "clamp(6rem, 12vh, 10rem)",
         paddingBottom: "clamp(5rem, 10vh, 8rem)",
       }}
     >
-      {/* Background image with overlay */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/hero-bg.png"
-          alt=""
-          fill
-          className="object-cover"
-          style={{ opacity: 0.12, mixBlendMode: "screen" }}
-          priority
-        />
-      </div>
-
-      {/* Floating shapes — indigo, violet, cyan */}
+      {/* Floating atmospheric blobs — deep teal / steel / lime trace */}
       <div className="hero-shape w-[600px] h-[600px]"
-        style={{ background: "#6366f1", opacity: 0.12, top: "-200px", right: "-150px", animation: "float 7s ease-in-out infinite" }} />
+        style={{ background: "#1B3A4B", opacity: 0.65, top: "-200px", right: "-150px", animation: "float 7s ease-in-out infinite" }} />
       <div className="hero-shape w-[400px] h-[400px]"
-        style={{ background: "#c084fc", opacity: 0.08, bottom: "-100px", left: "-100px", animation: "float-slow 9s ease-in-out infinite" }} />
-      <div className="hero-shape w-[260px] h-[260px]"
-        style={{ background: "#22d3ee", opacity: 0.06, top: "45%", left: "60%", animation: "float-reverse 6s ease-in-out infinite" }} />
+        style={{ background: "#7EA5FF", opacity: 0.22, bottom: "-100px", left: "-100px", animation: "float-slow 9s ease-in-out infinite" }} />
+      <div className="hero-shape w-[340px] h-[340px]"
+        style={{ background: "#CCFF00", opacity: 0.12, top: "45%", left: "60%", animation: "float-reverse 6s ease-in-out infinite" }} />
 
       {/* Grid overlay */}
-      <div className="absolute inset-0 opacity-[0.025]"
+      <div className="absolute inset-0 opacity-[0.05]"
         style={{
           backgroundImage: "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
           backgroundSize: "80px 80px"
@@ -122,7 +110,7 @@ export function Hero() {
             <div className="relative">
               <div className="absolute inset-0 rounded-3xl"
                 style={{
-                  background: "radial-gradient(circle, rgba(129,140,248,0.15) 0%, transparent 70%)",
+                  background: "radial-gradient(circle, rgba(204,255,0,0.15) 0%, transparent 70%)",
                   transform: "scale(1.3)",
                   filter: "blur(30px)",
                 }} />

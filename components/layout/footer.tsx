@@ -7,7 +7,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer style={{ background: "linear-gradient(160deg, #06040f 0%, #0c0a1d 100%)" }}>
+    <footer style={{ background: "linear-gradient(160deg, #030610 0%, #080D1A 100%)" }}>
       <div className="glow-line" />
 
       <div className="mx-auto max-w-6xl px-6 lg:px-8 py-16">
@@ -34,21 +34,21 @@ export function Footer() {
             <p className="text-xs font-sans font-semibold uppercase tracking-widest text-white/25 mb-4">Contact</p>
             <div className="flex flex-col gap-3">
               <a href={`mailto:${COMPANY.email}`} className="flex items-center gap-2 text-sm text-white/40 hover:text-white transition-colors duration-200">
-                <Mail size={14} style={{ color: "#818cf8" }} />
+                <Mail size={14} style={{ color: "#CCFF00" }} />
                 {COMPANY.email}
               </a>
               {COMPANY.linkedin ? (
                 <a href={COMPANY.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-white/40 hover:text-white transition-colors duration-200">
-                  <ExternalLink size={14} style={{ color: "#818cf8" }} />
+                  <ExternalLink size={14} style={{ color: "#CCFF00" }} />
                   LinkedIn
                 </a>
               ) : null}
               <a href={`tel:${COMPANY.phone.replace(/[-+ \s]/g, '')}`} className="flex items-center gap-2 text-sm text-white/40 hover:text-white transition-colors duration-200">
-                <Phone size={14} style={{ color: "#818cf8" }} />
+                <Phone size={14} style={{ color: "#CCFF00" }} />
                 {COMPANY.phone}
               </a>
               <span className="flex items-start gap-2 text-sm text-white/30 leading-snug">
-                <MapPin size={14} style={{ color: "#818cf8", opacity: 0.5, marginTop: "2px", flexShrink: 0 }} />
+                <MapPin size={14} style={{ color: "#CCFF00", opacity: 0.5, marginTop: "2px", flexShrink: 0 }} />
                 <span className="flex flex-col">
                   <span className="text-white/50 mb-0.5">{COMPANY.legalName}</span>
                   <span>{COMPANY.address}</span>

@@ -1,25 +1,33 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Fraunces, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/hooks/use-scroll-reveal";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
+import { GrainOverlay } from "@/components/ui/grain-overlay";
 import { COMPANY } from "@/lib/constants";
 import { organizationJsonLd } from "@/lib/seo";
 
-const inter = Inter({
-  variable: "--font-inter",
+// Lumen type stack: editorial serif + geometric sans + tech mono
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin"],
+  display: "swap",
+  style: ["normal", "italic"],
+  axes: ["SOFT", "opsz"],
+});
+
+const geist = Geist({
+  variable: "--font-geist",
   subsets: ["latin"],
   display: "swap",
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
   subsets: ["latin"],
   display: "swap",
-  style: ["normal", "italic"],
-  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -58,7 +66,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0c0a1d",
+  themeColor: "#030610",
   colorScheme: "dark",
   width: "device-width",
   initialScale: 1,
@@ -72,12 +80,12 @@ export default function RootLayout({
       lang="en"
       data-scroll-behavior="smooth"
       data-theme="dark"
-      className={`${inter.variable} ${playfair.variable}`}
+      className={`${fraunces.variable} ${geist.variable} ${geistMono.variable}`}
     >
       <body className="flex min-h-screen flex-col bg-[var(--surface-0)]">
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-lg focus:bg-[var(--accent-500)] focus:px-4 focus:py-2 focus:text-white focus:shadow-lg"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-lg focus:bg-[var(--lime-400)] focus:px-4 focus:py-2 focus:text-[var(--surface-0)] focus:shadow-lg"
         >
           Skip to content
         </a>
@@ -88,6 +96,7 @@ export default function RootLayout({
         />
         <ScrollReveal />
         <ScrollProgress />
+        <GrainOverlay />
         <Header />
         <main id="main-content" className="flex-1">{children}</main>
         <Footer />

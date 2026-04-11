@@ -8,8 +8,8 @@ export const metadata: Metadata = {
   description: `Privacy Policy for ${COMPANY.legalName}.`,
 };
 
-const heroGrad = "linear-gradient(160deg, #0c0a1d 0%, #151030 40%, #1a103a 100%)";
-const darkGrad = "linear-gradient(160deg, #0a0818 0%, #110e28 100%)";
+const heroGrad = "var(--gradient-hero)";
+const darkGrad = "var(--gradient-dark)";
 
 export default function PrivacyPage() {
   return (

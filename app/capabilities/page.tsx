@@ -11,18 +11,18 @@ export const metadata: Metadata = {
   description: "Advanced engineering, AI/Cloud integration, and strategic advisory. Building adaptable, high-ROI systems.",
 };
 
-const heroGrad = "linear-gradient(160deg, #0c0a1d 0%, #151030 40%, #1a103a 100%)";
-const darkGrad = "linear-gradient(160deg, #0a0818 0%, #110e28 100%)";
+const heroGrad = "var(--gradient-hero)";
+const darkGrad = "var(--gradient-dark)";
 
 const engineeringCapabilities = [
-  { label: "Refactor & Re-architect", desc: "Modernize legacy systems using cloud-native services. We transform rigid monolithic architectures into scalable, AI-ready microservices.", color: "#818cf8" },
-  { label: "Product Development", desc: "From concept to execution. We engineer reliable new products and services heavily integrated with modern data streams and AI workflows.", color: "#c084fc" },
+  { label: "Refactor & Re-architect", desc: "Modernize legacy systems using cloud-native services. We transform rigid monolithic architectures into scalable, AI-ready microservices.", color: "#CCFF00" },
+  { label: "Product Development", desc: "From concept to execution. We engineer reliable new products and services heavily integrated with modern data streams and AI workflows.", color: "#7EA5FF" },
   { label: "Flawless Integration", desc: "A sound strategy depends on execution. We orchestrate the integration of complex applications, APIs, and storage between on-premises and cloud environments.", color: "#34d399" },
 ];
 
 const teamStrengths = [
-  { label: "Advanced Engineers", desc: "Professionals who possess not just specialized knowledge, but the ability to grasp front-line industry needs and respond efficiently.", color: "#818cf8" },
-  { label: "Extensive Solutions", desc: "Providing multi-domain support across finance, technology, manufacturing, and logistics. Our adaptable expertise spans modern cloud infrastructure, robotics, and AI.", color: "#c084fc" },
+  { label: "Advanced Engineers", desc: "Professionals who possess not just specialized knowledge, but the ability to grasp front-line industry needs and respond efficiently.", color: "#CCFF00" },
+  { label: "Extensive Solutions", desc: "Providing multi-domain support across finance, technology, manufacturing, and logistics. Our adaptable expertise spans modern cloud infrastructure, robotics, and AI.", color: "#7EA5FF" },
   { label: "Strategic Partnerships", desc: "We act as your true technology partner, delivering services rooted in strong corporate ethics, reliability, and human-to-human connection.", color: "#34d399" },
 ];
 
@@ -31,11 +31,11 @@ export default function CapabilitiesPage() {
     <>
       <section className="relative overflow-hidden py-24 lg:py-32" style={{ background: heroGrad }}>
         <div className="hero-shape w-[420px] h-[420px]"
-          style={{ background: "#6366f1", opacity: 0.1, top: "-100px", right: "-80px", animation: "float 7s ease-in-out infinite" }} />
+          style={{ background: "#1B3A4B", opacity: 0.1, top: "-100px", right: "-80px", animation: "float 7s ease-in-out infinite" }} />
         <div className="hero-shape w-[260px] h-[260px]"
-          style={{ background: "#c084fc", opacity: 0.06, bottom: "-60px", left: "20%", animation: "float-slow 9s ease-in-out infinite" }} />
+          style={{ background: "#7EA5FF", opacity: 0.06, bottom: "-60px", left: "20%", animation: "float-slow 9s ease-in-out infinite" }} />
 
-        <div className="absolute inset-0 opacity-[0.02]"
+        <div className="absolute inset-0 opacity-[0.05]"
           style={{
             backgroundImage: "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
             backgroundSize: "80px 80px"
@@ -55,7 +55,7 @@ export default function CapabilitiesPage() {
             <div className="hidden lg:flex justify-center">
               <div className="relative">
                 <div className="absolute inset-0 rounded-2xl"
-                  style={{ background: "radial-gradient(circle, rgba(129,140,248,0.12) 0%, transparent 70%)", transform: "scale(1.2)", filter: "blur(25px)" }} />
+                  style={{ background: "radial-gradient(circle, rgba(204,255,0,0.10) 0%, transparent 70%)", transform: "scale(1.2)", filter: "blur(25px)" }} />
                 <Image src="/section-bg.png" alt="" width={400} height={400} loading="eager" className="relative rounded-2xl" style={{ filter: "brightness(0.85) contrast(1.1)", opacity: 0.7 }} />
               </div>
             </div>
@@ -117,7 +117,7 @@ export default function CapabilitiesPage() {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="mt-1"><CheckCircle2 size={20} className="text-indigo-400 opacity-80" /></div>
+                  <div className="mt-1"><CheckCircle2 size={20} className="text-[#CCFF00] opacity-80" /></div>
                   <div>
                     <h4 className="text-white font-sans font-semibold mb-2">AI Center of Excellence (AICoE)</h4>
                     <p className="text-white/45 text-sm leading-relaxed">The evolution of technology demands a team of strategists from IT, business, and vendor sides. We help you establish an AICoE—a long-term operational framework ensuring you move continuously from driving costs to driving business value.</p>
@@ -129,7 +129,7 @@ export default function CapabilitiesPage() {
             <div className="reveal hidden lg:block" style={{ transitionDelay: "0.2s" }}>
               <div className="gradient-border-card">
                 <div className="gradient-border-card-inner p-10 flex flex-col items-center text-center">
-                  <div className="w-20 h-20 rounded-full mb-6 flex items-center justify-center relative shadow-[0_0_40px_rgba(129,140,248,0.2)]" style={{ background: "rgba(129,140,248,0.1)", border: "1px solid rgba(129,140,248,0.2)" }}>
+                  <div className="w-20 h-20 rounded-full mb-6 flex items-center justify-center relative shadow-[0_0_40px_rgba(204,255,0,0.22)]" style={{ background: "rgba(204,255,0,0.08)", border: "1px solid rgba(204,255,0,0.25)" }}>
                     <Image src="/ai-art.png" alt="Excellence" width={80} height={80} className="rounded-full opacity-80" />
                   </div>
                   <h3 className="text-xl font-serif font-bold text-white mb-4">The Best-Fitting IT Solution</h3>

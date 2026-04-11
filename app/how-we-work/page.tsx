@@ -10,14 +10,14 @@ export const metadata: Metadata = {
   description: "Our approach: understand the problem first, align on outcomes, deliver with ownership, and evolve honestly.",
 };
 
-const heroGrad = "linear-gradient(160deg, #0c0a1d 0%, #151030 40%, #1a103a 100%)";
-const darkGrad = "linear-gradient(160deg, #0a0818 0%, #110e28 100%)";
+const heroGrad = "var(--gradient-hero)";
+const darkGrad = "var(--gradient-dark)";
 
 const steps = [
-  { number: "01", color: "#818cf8", bg: "rgba(129,140,248,0.08)", title: "Understand", description: "We take time to understand your context, constraints, and actual challenge before we suggest anything. This means asking questions that may feel slow at first, but produce clarity that saves significant time later. We do not start with a solution." },
+  { number: "01", color: "#CCFF00", bg: "rgba(204,255,0,0.10)", title: "Understand", description: "We take time to understand your context, constraints, and actual challenge before we suggest anything. This means asking questions that may feel slow at first, but produce clarity that saves significant time later. We do not start with a solution." },
   { number: "02", color: "#f59e0b", bg: "rgba(245,158,11,0.08)", title: "Align", description: "We agree on what good looks like: outcomes, ways of working, communication rhythms, and how we will measure progress together. Alignment is not a formality — it is the foundation that makes everything else work." },
   { number: "03", color: "#34d399", bg: "rgba(52,211,153,0.08)", title: "Deliver", description: "We show up with ownership. We integrate with your teams, adapt to your environment, and deliver with care. If something is not working, we say so early. We do not wait for a retrospective to surface a problem." },
-  { number: "04", color: "#c084fc", bg: "rgba(192,132,252,0.08)", title: "Evolve", description: "We stay honest about what is working and what is not. We adjust without drama. Engagements that earn trust tend to grow — not because we push for it, but because the work demonstrates value over time." },
+  { number: "04", color: "#7EA5FF", bg: "rgba(126,165,255,0.10)", title: "Evolve", description: "We stay honest about what is working and what is not. We adjust without drama. Engagements that earn trust tend to grow — not because we push for it, but because the work demonstrates value over time." },
 ];
 
 const expectations = [
@@ -34,11 +34,11 @@ export default function HowWeWorkPage() {
     <>
       <section className="relative overflow-hidden py-24 lg:py-32" style={{ background: heroGrad }}>
         <div className="hero-shape w-[400px] h-[400px]"
-          style={{ background: "#6366f1", opacity: 0.1, top: "-80px", right: "-60px", animation: "float 8s ease-in-out infinite" }} />
+          style={{ background: "#1B3A4B", opacity: 0.1, top: "-80px", right: "-60px", animation: "float 8s ease-in-out infinite" }} />
         <div className="hero-shape w-[220px] h-[220px]"
           style={{ background: "#34d399", opacity: 0.05, bottom: "-50px", left: "25%", animation: "float-slow 7s ease-in-out infinite" }} />
 
-        <div className="absolute inset-0 opacity-[0.02]"
+        <div className="absolute inset-0 opacity-[0.05]"
           style={{
             backgroundImage: "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
             backgroundSize: "80px 80px"
@@ -66,7 +66,7 @@ export default function HowWeWorkPage() {
           <div className="relative">
             {/* Vertical line */}
             <div className="hidden lg:block absolute left-[39px] top-0 bottom-0 w-px"
-              style={{ background: "linear-gradient(180deg, rgba(129,140,248,0.3) 0%, rgba(192,132,252,0.15) 50%, rgba(52,211,153,0.1) 100%)" }} />
+              style={{ background: "linear-gradient(180deg, rgba(204,255,0,0.40) 0%, rgba(126,165,255,0.20) 50%, rgba(74,222,128,0.10) 100%)" }} />
 
             <div className="flex flex-col gap-8">
               {steps.map((step, i) => (
@@ -96,7 +96,7 @@ export default function HowWeWorkPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {expectations.map((item, i) => (
                 <div key={item} className="glass-card p-5 flex items-start gap-3 reveal" style={{ transitionDelay: `${i * 0.08}s` }}>
-                  <CheckCircle2 size={16} className="mt-0.5 flex-shrink-0" style={{ color: "#818cf8", opacity: 0.6 }} />
+                  <CheckCircle2 size={16} className="mt-0.5 flex-shrink-0" style={{ color: "#CCFF00", opacity: 0.6 }} />
                   <span className="text-white/55 leading-relaxed text-[15px]">{item}</span>
                 </div>
               ))}

@@ -58,7 +58,7 @@ export function ScrollProgress() {
           background:
             "linear-gradient(90deg, transparent 0%, var(--accent-400) 30%, var(--violet-500) 60%, var(--magenta-500) 100%)",
           transition: "transform 120ms linear",
-          boxShadow: "0 0 14px rgba(129,140,248,0.45)",
+          boxShadow: "0 0 14px rgba(204,255,0,0.50)",
         }}
       />
     </div>

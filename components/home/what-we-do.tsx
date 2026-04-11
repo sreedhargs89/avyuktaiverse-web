@@ -14,7 +14,7 @@ const offerings = [
     description:
       "We embed skilled engineers, architects, and delivery professionals directly into your teams. These are not contractors filling seats — they are problem solvers who understand your context, take ownership of outcomes, and apply AI thoughtfully to improve the quality and pace of what you build.",
     href: "/capabilities#talent-extension",
-    accent: "#818cf8",
+    accent: "#CCFF00",
   },
   {
     number: "02",
@@ -30,7 +30,7 @@ const offerings = [
 
 export function WhatWeDo() {
   return (
-    <section className="relative py-20 lg:py-28" style={{ background: "linear-gradient(160deg, #0c0a1d 0%, #151030 40%, #1a103a 100%)" }}>
+    <section className="relative py-20 lg:py-28" style={{ background: "var(--gradient-hero)" }}>
       <div className="section-divider absolute top-0 left-0 right-0" />
 
       <Container>
