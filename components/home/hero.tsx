@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Container } from "@/components/layout/container";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Sparkles } from "lucide-react";
@@ -34,8 +33,7 @@ export function Hero() {
       <HeroClient />
 
       <Container className="relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-          <div>
+        <div className="max-w-4xl">
             <div className="mb-6 animate-fade-in-up" style={{ animationDelay: "60ms" }}>
               <Badge variant="pulse">
                 <Sparkles size={12} className="mr-1.5" />
@@ -46,7 +44,7 @@ export function Hero() {
             <h1
               className="font-serif font-bold text-white mb-6 leading-[1.05] animate-fade-in-up"
               style={{
-                fontSize: "clamp(2.6rem, 6.5vw, 4.4rem)",
+                fontSize: "clamp(2.8rem, 8vw, 6rem)",
                 animationDelay: "140ms",
               }}
             >
@@ -55,7 +53,7 @@ export function Hero() {
             </h1>
 
             <p
-              className="text-lg lg:text-xl text-white/55 leading-relaxed max-w-xl mb-10 animate-fade-in-up"
+              className="text-lg lg:text-xl text-white/55 leading-relaxed max-w-2xl mb-10 animate-fade-in-up"
               style={{ animationDelay: "240ms" }}
             >
               We work alongside your engineering teams — as architects, engineers,
@@ -103,28 +101,6 @@ export function Hero() {
                 </div>
               ))}
             </div>
-          </div>
-
-          {/* Hero illustration */}
-          <div className="hidden lg:flex items-center justify-center">
-            <div className="relative">
-              <div className="absolute inset-0 rounded-3xl"
-                style={{
-                  background: "radial-gradient(circle, rgba(204,255,0,0.15) 0%, transparent 70%)",
-                  transform: "scale(1.3)",
-                  filter: "blur(30px)",
-                }} />
-              <Image
-                src="/ai-art.png"
-                alt="AI-enabled engineering collaboration"
-                width={480}
-                height={480}
-                className="relative z-10 rounded-2xl"
-                style={{ filter: "brightness(0.9) contrast(1.1)" }}
-                priority
-              />
-            </div>
-          </div>
         </div>
       </Container>
     </section>
